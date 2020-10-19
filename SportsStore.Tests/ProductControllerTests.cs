@@ -25,7 +25,7 @@ namespace SportsStore.Tests
             ProductController controller = new ProductController(mock.Object);
             controller.PageSize = 3;
 
-            ProductListViewModel results = controller.List(2)
+            ProductListViewModel results = controller.List(null, 2)
                 .ViewData.Model as ProductListViewModel;
 
             Product[] prodArray = results.Products.ToArray();
@@ -51,7 +51,7 @@ namespace SportsStore.Tests
                 PageSize = 3
             };
 
-            ProductListViewModel results = controller.List(2)
+            ProductListViewModel results = controller.List(null, 2)
                .ViewData.Model as ProductListViewModel;
 
             PagingInfo pageInfo = results.PagingInfo;
