@@ -36,6 +36,7 @@ namespace SportsStore
             app.UseStaticFiles();
             app.UseRouting();
             app.UseStatusCodePages();
+            app.UseSession();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
