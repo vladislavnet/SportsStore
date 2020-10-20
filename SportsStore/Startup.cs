@@ -26,7 +26,7 @@ namespace SportsStore
                 
             services.AddTransient<IProductRepository, EFProductRepository>();
             services.AddMvc();
-            services.AddMemoryCache();
+            services.AddDistributedMemoryCache();
             services.AddSession();
         }
 
