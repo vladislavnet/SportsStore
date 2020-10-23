@@ -21,5 +21,29 @@
         "fonts/FontAwesome.otf"
       ]
     }
+  ,
+{
+  "provider": "cdnjs",
+  "library": "jquery@3.5.1",
+  "destination": "wwwroot/lib/jquery/"
+}
+,
+{
+  "provider": "cdnjs",
+  "library": "jquery-validate@1.19.2",
+  "destination": "wwwroot/lib/jquery-validate/",
+  "files": [
+    "jquery.validate.min.js"
   ]
+}
+,
+{
+  "provider": "cdnjs",
+  "library": "jquery-validation-unobtrusive@3.2.11",
+  "destination": "wwwroot/lib/jquery-validation-unobtrusive/",
+  "files": [
+    "jquery.validate.unobtrusive.min.js"
+  ]
+}
+]
 }
