@@ -2,10 +2,8 @@
 using Moq;
 using SportsStore.Controllers;
 using SportsStore.Models;
-using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
 using Xunit;
 
 namespace SportsStore.Tests
@@ -22,7 +20,7 @@ namespace SportsStore.Tests
                 new Product { ProductID = 2, Name = "P2" },
                 new Product { ProductID = 3, Name = "P3" },
             }).AsQueryable());
-            AdminContoller contoller = new AdminContoller(mock.Object);
+            AdminController contoller = new AdminController(mock.Object);
 
             Product[] result = GetViewMode<IEnumerable<Product>>(contoller.Index())?.ToArray();
 

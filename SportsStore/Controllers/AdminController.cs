@@ -3,11 +3,11 @@ using SportsStore.Models;
 
 namespace SportsStore.Controllers
 {
-    public class AdminContoller : Controller
+    public class AdminController : Controller
     {
         private IProductRepository repository;
 
-        public AdminContoller(IProductRepository repo)
+        public AdminController(IProductRepository repo)
         {
             repository = repo;
         }
