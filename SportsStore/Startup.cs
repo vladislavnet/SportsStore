@@ -49,6 +49,7 @@ namespace SportsStore
             app.UseStatusCodePages();
             app.UseSession();
             app.UseAuthentication();
+            app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
                 endpoints.MapControllerRoute(
