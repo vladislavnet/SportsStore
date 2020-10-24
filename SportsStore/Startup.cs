@@ -43,15 +43,26 @@ namespace SportsStore
 
         public void Configure(IApplicationBuilder app, IWebHostEnvironment env)
         {
-            app.UseDeveloperExceptionPage();
+            if (env.IsDevelopment())
+            {
+                app.UseDeveloperExceptionPage();
+                app.UseStatusCodePages();
+            }
+            else
+            {
+                app.UseExceptionHandler("/Error");
+            }
             app.UseStaticFiles();
             app.UseRouting();
-            app.UseStatusCodePages();
             app.UseSession();
             app.UseAuthentication();
             app.UseAuthorization();
             app.UseEndpoints(endpoints =>
             {
+                endpoints.MapControllerRoute(
+                    name: "Error",
+                    pattern: "Error",
+                    defaults: new { Controller = "Error", action = "Error" });
                 endpoints.MapControllerRoute(
                     name: null,
                     pattern: "{category}/Page{productPage:int}",
