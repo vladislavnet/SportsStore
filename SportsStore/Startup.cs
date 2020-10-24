@@ -72,6 +72,7 @@ namespace SportsStore
                     pattern: "{controller=Product}/{action=List}/{id?}");
             });
             SeedData.EnsurePopulated(app);
+            IdentitySeedData.EnsurePopulated(app);
         }
     }
 }
